@@ -80,3 +80,6 @@ fabric.properties
 .idea/**/vcs.xml
 .idea/**/Project_Default.xml
 .idea/**/codeStyleConfig.xml
+
+# macOS system files
+.DS_Store
