@@ -17,9 +17,9 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<User>(adminUser);
 
   return (
-      <AppContext.Provider value={{ users, currentUser, setCurrentUser }}>
-        {children}
-      </AppContext.Provider>
+    <AppContext.Provider value={{ users, currentUser, setCurrentUser }}>
+      {children}
+    </AppContext.Provider>
   );
 };
 
