@@ -121,6 +121,7 @@ export const ProductsPage: React.FC = () => {
         setEditingProduct(undefined);
         reload();
       } catch (error) {
+        console.error(error);
         setSnackBarSuccess(
           `An error has ocurred updating the price ${editingProduct.price} for '${editingProduct.title}'`
         );
@@ -185,6 +186,7 @@ export const ProductsPage: React.FC = () => {
         width: 100,
         getActions: (cell) => [
           <GridActionsCellItem
+            key={cell.row.id}
             label="Update price"
             onClick={() => updatingQuantity(cell.row.id)} // openAddModal(cell.row)}
             showInMenu

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import { AppContext, User } from "./AppContext";
 
@@ -16,8 +17,12 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<User>(adminUser);
 
   return (
-    <AppContext.Provider value={{ users, currentUser, setCurrentUser }}>
-      {children}
-    </AppContext.Provider>
+      <AppContext.Provider value={{ users, currentUser, setCurrentUser }}>
+        {children}
+      </AppContext.Provider>
   );
+};
+
+AppProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
