@@ -40,22 +40,19 @@ export default tseslint.config(
       },
     },
     rules: {
-      // Reglas de React recomendadas
       ...reactPlugin.configs.recommended.rules,
       ...reactHooksPlugin.configs.recommended.rules,
 
-      // Tus reglas personalizadas
       "@typescript-eslint/no-unused-vars": ["warn"],
       "no-fallthrough": "error",
 
-      // Regla de react-refresh
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },
       ],
 
-      // Desactiva la regla de react-in-jsx-scope (no necesaria en React 17+)
       "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
     },
   }
 );
